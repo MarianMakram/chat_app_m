@@ -1,5 +1,6 @@
 import 'package:chat_app/screens/Login.dart';
 import 'package:chat_app/screens/SignUp.dart';
+import 'package:chat_app/screens/chat.dart';
 import 'package:device_preview/device_preview.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart';
@@ -22,17 +23,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       routes: {
         'LoginScreen':(context) => const LoginScreen(),
         'SignUpScreen':(context) => const SignUpScreen(),
+        'Home':(context) => Home(),
       },
-      debugShowCheckedModeBanner: false,
       title: 'Login Sample',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
-      initialRoute:  'LoginScreen',
+      initialRoute: 'LoginScreen',
     );
   }
 }
