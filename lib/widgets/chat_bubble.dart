@@ -22,7 +22,7 @@ class ChatBubble extends StatelessWidget {
               topLeft: Radius.circular(20),
               topRight: Radius.circular(20),
               bottomRight: Radius.circular(20),
-              bottomLeft: Radius.circular(4), // Telegram style
+              bottomLeft: Radius.circular(4),
             ),
             boxShadow: [
               BoxShadow(
@@ -83,7 +83,7 @@ class ChatBubbleTwo extends StatelessWidget {
               topLeft: Radius.circular(20),
               topRight: Radius.circular(20),
               bottomLeft: Radius.circular(20),
-              bottomRight: Radius.circular(4), // Telegram style
+              bottomRight: Radius.circular(4),
             ),
             boxShadow: [
               BoxShadow(

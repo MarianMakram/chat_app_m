@@ -70,7 +70,6 @@ class Home extends StatelessWidget {
       ),
       body: Column(
         children: [
-          /// 🔹 StreamBuilder only for messages list
           Expanded(
             child: StreamBuilder<QuerySnapshot>(
               stream: message.orderBy('createdAt', descending: true).snapshots(),
@@ -98,7 +97,6 @@ class Home extends StatelessWidget {
             ),
           ),
 
-          /// 🔹 Input field outside StreamBuilder to avoid rebuilds
           SafeArea(
             child: Padding(
               padding: const EdgeInsets.all(8.0),
@@ -108,7 +106,7 @@ class Home extends StatelessWidget {
                   if (data.trim().isEmpty) return;
 
                   await message.add({
-                    'message': data.trim(),
+                    'message': data,
                     'createdAt': DateTime.now(),
                     'id': emailController,
                   });

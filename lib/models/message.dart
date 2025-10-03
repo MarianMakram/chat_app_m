@@ -7,12 +7,12 @@ class Message {
 
   Message(this.message, this.id, this.createdAt);
 
-  factory Message.fromjson(DocumentSnapshot jsonData) {
+  factory Message.fromjson(jsonData) {
     final data = jsonData.data() as Map<String, dynamic>;
     return Message(
       data['message'] ?? '',
       data['id'] ?? 'unknown',
-      (data['createdAt'] as Timestamp).toDate(),  // 🔹 convert from Firestore
+      (data['createdAt'] as Timestamp).toDate(),
     );
   }
 }
